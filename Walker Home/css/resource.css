@@ -1,0 +1,494 @@
+
+.center-top{
+    width:100%;
+    height:35.1vw;
+    display: block;
+    position: relative;
+
+}
+.center-img{
+    position: fixed;
+    z-index: -1;
+    width:100%;
+    top:10px;
+    overflow: hidden;
+}
+.center-img img{
+    width:100%;
+    height:auto;
+
+}
+.line:before{
+    content: '';
+    width:32px;
+    height:1000px;
+    background-color: #232442;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 222;
+
+}
+.line:after{
+    content: '';
+    width:21px;
+    height:234px;
+    background-color: #232442;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 2;
+}
+.cent-txt{
+    color:#ffffff;
+    position: absolute;
+    left:5%;
+    bottom: 30px;
+}
+.cent-txt h2 {
+    font-size:36px;
+
+}
+.contain{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 111;
+    background-color: red;
+    background:url("../images/wood.jpg")no-repeat;
+}
+.contain-l{
+    width:50%;
+    float:left;
+    position: relative;
+
+}
+.contain-w{
+    width:100%;
+    padding: 70px 0 0 0;
+    float:right;
+    margin-right: 150px;
+}
+.contain-w .yong{
+    width:327px;
+    height:auto;
+    background: #232442;
+    padding:40px 26px;
+    color:#ffffff;
+    float: right;
+    margin-bottom: 50px;
+}
+.contain-w .yong h3{
+    font-size: 33px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.contain-r{
+    width:50%;
+    background-color: #eeeeee;
+    float:right;
+    padding-top:120px;
+    overflow: hidden;
+    position: relative;
+    z-index: 11;
+}
+.contain-r .text h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 50px;
+   padding-bottom: 35px;
+}
+.contain-r ul {
+    width:2000%;
+    overflow: hidden;
+    margin-bottom: -10px;
+    position: relative;
+}
+.contain-r ul li {
+    width:5%;
+    height:auto;
+    float:left;
+    position: relative;
+
+}
+.contain-r ul li img{
+    width:100%;
+    height:auto;
+}
+.contain-r ul li span {
+    display: block;
+    width:100%;
+    height:54px;
+    color:#ffffff;
+    background: rgba(0,0,0,0.6);
+    font-size: 17px;
+    text-align: center;
+    line-height: 54px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+.contain-r ol{
+    width:100%;
+    height:64px;
+    background: #232442;
+    position: relative;
+    bottom: -10px;
+}
+.contain-r ol li{
+    width:50%;
+    height:64px;
+    float:left;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.contain-r ol li:nth-child(1){
+    border-right: 1px solid#2f318b;
+}
+.contain-r ol li:nth-child(1) span {
+    display: block;
+    width: 30px;
+    height: 34px;
+    background: url('../images/prev2.png') no-repeat;
+    margin: auto;
+    margin-top: 20px;
+}
+.contain-r ol li:nth-child(2) span {
+    display: block;
+    width: 30px;
+    height: 34px;
+    background: url('../images/next2.png') no-repeat;
+    margin: auto;
+    margin-top: 20px;
+}
+.contain-r ol li:before{
+    content: '';
+    width:100%;
+    height:0px;
+    background: #2f318b;
+    position: absolute;
+    top:50%;
+    left:0;
+    z-index: -1;
+    transition: .6s;
+}
+.contain-r ol li:hover:before{
+    height:64px;
+    top:0;
+}
+
+.center-bj{
+    width:100%;
+    background: url("../images/recuite.jpg") center fixed no-repeat;
+    z-index: 11;
+}
+.bott {
+    width:936px;
+    margin: auto;
+    padding:108px 0 128px;
+    overflow: hidden;
+}
+.bott ul {
+}
+.bott ul li{
+    width:32%;
+    height: 200px;
+    margin-right: 1.5%;
+    background-color: #ffffff;
+    float:left;
+    padding: 20px 26px 23px;
+    position: relative;
+    overflow: hidden;
+}
+.bott ul li:before{
+    content: '';
+    width:0px;
+    height:0px;
+    background-color: #232442;
+    border-radius: 100%;
+    position:absolute;
+    top:46%;
+    left:45%;
+    z-index: 1;
+    transition: .5s;
+
+}
+.bott ul li:hover:before{
+    width:10px;
+    height:10px;
+    transform: scale(70);
+}
+.inner {
+    position: relative;
+    z-index: 2;
+}
+.bott ul li:hover h3{
+color:#fff;
+}
+.bott ul li:hover p{
+    color:#fff;
+}
+.bott ul li:hover span{
+    color:#fff;
+}
+.bott ul li:hover i{
+    color:#fff;
+}
+.inner h3{
+    color:#323232;
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+}
+.inner span{
+    display: block;
+    font-size: 50px;
+    position: absolute;
+    top:-5px;
+    right:0;
+}
+.inner span i {
+    font-size: 14px;
+    color:#323232;
+    position: relative;
+    top:-30px;
+}
+.inner p{
+    padding-top: 30px;
+    line-height: 25px;
+}
+
+
+
+
+@media (max-width:1450px) {
+    .contain{
+        width:100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        background:#eeeeee;
+    }
+    .contain-l{
+        width:50%;
+        float:left;
+        position: relative;
+        background:url("../images/wood.jpg")no-repeat;
+    }
+    .contain-w{
+        width:100%;
+        padding: 70px 0 0 0;
+        float:right;
+        margin-right: 150px;
+    }
+    .contain-w .yong{
+        width:327px;
+        height:540px;
+        background: #232442;
+        padding:40px 26px;
+        color:#ffffff;
+        float: right;
+        margin-bottom: 60px;
+    }
+
+
+}
+@media (max-width:1280px){
+
+}
+
+@media (max-width:1200px){
+
+}
+@media (max-width:1024px){
+    .line{
+        display: none;
+    }
+    .contain{
+        width:100%;
+        position: relative;
+        background:none;
+    }
+    .contain-l{
+        width:100%;
+        float:none;
+        position: relative;
+    }
+    .contain-w{
+        width:100%;
+        padding: 0 0 0 0;
+        float:none;
+        margin-right: 0px;
+    }
+
+    .contain-w .yong{
+        width:100%;
+        height:auto;
+        padding:28px 51px;
+        margin-bottom: 0px;
+    }
+    .center-top{
+        width:100%;
+        height:auto;
+        display: block;
+        position: relative;
+    }
+    .center-img{
+        position: relative;
+        z-index: -1;
+        width:100%;
+        top:0px;
+    }
+    .center-img img{
+        width:100%;
+        height:100%;
+    }
+    .contain-r{
+        width:90%;
+        margin: auto;
+        overflow: hidden;
+        background-color: #fff;
+        float:none;
+        padding-top:30px;
+    }
+    .contain-r .text h2{
+        font-size: 32px;
+        font-weight: bold;
+        margin-left: 0px;
+        padding-bottom: 15px;
+    }
+
+    .bott {
+        width:90%;
+        margin: auto;
+        padding:58px 0 65px;
+    }
+
+    .bott ul li{
+        width:47.8%;
+        height: 190px;
+        padding: 10px 26px 0px;
+
+    }
+    .bott ul li:nth-child(2){
+        float:right;
+    }
+    .bott ul li:before{
+        content: '';
+        width:0px;
+        height:0px;
+        background-color: #fff;
+        border-radius: 100%;
+        position:absolute;
+        top:46%;
+        left:45%;
+        z-index: 1;
+        transition: .5s;
+
+
+    }
+    .bott ul li:hover:before{
+        width:0;
+        height:0;
+        transform: scale(0);
+    }
+    .inner {
+        position: relative;
+        z-index: 2;
+    }
+    .bott ul li:hover h3{
+        color:#323232;
+    }
+    .bott ul li:hover p{
+        color:#323232;
+    }
+    .bott ul li:hover span{
+        color:#323232;
+    }
+    .bott ul li:hover i{
+        color:#323232;
+    }
+    .inner h3{
+         color:#323232;
+         font-size: 26px;
+         font-weight: bold;
+         position: relative;
+     }
+    .inner span{
+        display: block;
+        font-size: 50px;
+        position: absolute;
+        top:-5px;
+        right:0;
+    }
+    .inner span i {
+        font-size: 14px;
+        color:#323232;
+        position: relative;
+        top:-30px;
+    }
+    .inner p{
+        padding-top: 18px;
+        line-height: 21px;
+    }
+
+
+
+
+
+}
+@media (max-width:851px){
+
+
+}
+@media (max-width:641px){
+    .center-top{
+        position: relative;
+       padding-top: 70px;
+    }
+    .cent-txt{
+        color:#ffffff;
+        position: absolute;
+        left:5%;
+        bottom: 15px;
+    }
+    .cent-txt h2 {
+        font-size:26px;
+        line-height: 22px;
+    }
+    .contain-w .yong{
+        padding:20px 5%;
+    }
+    .contain-w .yong h3{
+        font-size: 26px;
+        padding-bottom: 12px;
+    }
+    .contain-w .yong p{
+        font-size:14px;
+    }
+    .bott ul li{
+        width:100%;
+        height: 160px;
+        padding: 10px 26px;
+        margin-bottom: 30px;
+    }
+    .bott ul li:nth-child(2){
+        float:none;
+    }
+    .bott {
+        width:90%;
+        margin: auto;
+        padding:40px 0 30px;
+    }
+
+
+}
+
+
+@media (max-width:480px){
+
+
+}
+

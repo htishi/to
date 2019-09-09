@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+
+        div{width:100vw;height:100vh;}
+
+        div:nth-child(1){background-color:red;}
+
+        div:nth-child(2){background-color:blue;}
+
+        div:nth-child(3){background-color:green;}
+
+        div:nth-child(1){background-color:pink;}
+
+    </style>
+</head>
+
+<body style="overflow:hidden">
+
+<div><span>1</span></div>
+
+<div><span>2</span></div>
+
+<div><span>3</span></div>
+
+<div><span>4</span></div>
+<script>
+
+
+var div=document.getElementsByTagName("div");
+
+if(window.addEventListener){
+
+    window.addEventListener("DOMMouseScroll",wheel);}
+
+window.onmousewheel=wheel;
+
+function wheel(ev){
+
+    var  e=ev||window.event;
+
+    var  limit=div[0].offsetHeight;
+
+    var  delta=0;
+
+    if(e.wheelDelta){
+
+    delta=e.wheelDelta;}
+
+    else if(e.detail){
+
+    delta=-e.detail}    
+
+    if(delta<0){
+
+        var  down=setInterval(function(){
+
+                scroll=document.documentElement.scrollTop||document.body.scrollTop;
+
+                window.onmousewheel=null;
+
+                if(window.addEventListener){
+
+                        window.removeEventListener("DOMMouseScroll",wheel)}
+
+                window.scrollBy(0,1);
+
+                if(scroll%limit<1){
+
+                    clearInterval(down);
+
+                    if(window.addEventListener){
+
+                        window.addEventListener("DOMMouseScroll",wheel)}
+
+                    window.onmousewheel=wheel;}},1);}
+
+    else{var up=setInterval(function(){
+
+            scroll=document.documentElement.scrollTop||document.body.scrollTop;
+
+            window.scrollBy(0,-1);
+
+            window.onmousewheel=null;  
+
+             if(scroll%limit<1){
+
+                    clearInterval(down);
+
+                    if(window.addEventListener){
+
+                        window.addEventListener("DOMMouseScroll",wheel)}
+
+                    window.onmousewheel=wheel;}},1);}}
+
+</script>
+
+</body>
+</html>

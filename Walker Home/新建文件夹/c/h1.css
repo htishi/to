@@ -1,0 +1,593 @@
+/*
+* @Author: hp
+* @Date:   2019-08-26 09:34:21
+* @Last Modified by:   hp
+* @Last Modified time: 2019-08-26 15:40:17
+*/
+body, div, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ 
+ul, li {
+    list-style: none;
+}
+ 
+a {
+    text-decoration: none
+}
+ body {
+    width: 100%;
+    overflow: hidden;
+    font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+}
+#pageContain {
+    overflow: hidden
+}
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide, .swipe {
+    display: block;
+    z-index: 2;
+}
+ 
+.contain {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0
+}
+ 
+.current {
+    display: block;
+    z-index: 1;
+}
+/*内容*/
+
+.line:before{
+	content:'';
+	width:31px;
+	height:100%;
+	background-color:#232442;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.line:after{
+	content:'';
+	width:21px;
+	height:324;
+	background-color:#232442;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:1;
+}
+.dow span{
+	display:block;
+	width:90px;
+	height:90px;
+	background: url('../images/radius.png')no-repeat;
+	position:absolute;
+	left:88px;
+	bottom:40px;
+}
+.center-box span{
+	display:inline-block;
+	width:69px;
+	height:69px;
+	background:url('../images/video.png')no-repeat;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+
+}
+.center-bot{
+    width:50%;
+    color:#fff;
+    font-size:32px;
+	line-height:112px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	background-color:rgba(35,36,66,0.9);
+}
+.center-bot span{
+	margin-left:70px;
+	letter-spacing: 2px;
+}
+.center-bot i{
+	display:block;
+	width:10px;
+	height:60px;
+	background-color:#e6d6c1;
+	position:absolute;
+	top:0;
+	left:30px;
+	
+}
+.shimu{
+	position:fixed;
+	left:88px;
+	top:20%;
+	z-index: 11;
+}
+.shimu .shimu-top img{
+	margin-bottom:30px;
+}
+.shimu ul li{
+	text-align:center;
+	color:#fff;
+	width:141px;
+	height:50px;
+	line-height:50px;
+	font-weight: 600;
+	background-color:#232442;
+	border-bottom:1px solid#000;
+	position:relative;
+	cursor:pointer;
+	z-index:11;
+}
+.shimu ul li span:before{
+	display:inline-block;
+	content:'';
+	width:100%;
+	height:0px;
+	background-color:#cfa972;
+	position:absolute;
+	left:0;
+	top:50%;
+	transition: .4s;
+}
+.shimu ul li:hover  span:before{
+	top:0;
+	height:100%;
+	color:#fff;
+	z-index: -1;
+}
+
+
+
+@media (max-width:1024px){
+    body {
+    width: 100%;
+    overflow:visible;
+    font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+  }
+   .line{
+   	display:none;
+   }
+   .dow span{
+   	display:none;
+   }
+   .center1{
+   	width:100%;
+   	height:799px;
+   	background-color:red;
+   }
+   #navbar{
+   	opacity:0;
+   }
+
+
+
+ 
+
+
+
+}
+
+
+
+
+
+
+ 
+
+/*导航条*/
+#navBar {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -50px
+}
+ 
+#navBar .active {
+    width: 10px;
+    height: 10px;
+    margin: 0 0 10px 0;
+    background: #f05b34;
+}
+ 
+#navBar li {
+    cursor: pointer;
+    margin: 0 0 10px 2px;
+    transition: all .2s ease;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: rgba(85, 85, 85, 0.6)
+}
+ 
+.psec {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative
+}
+ 
+.psecin {
+    position: absolute;
+    opacity: 0
+}
+ 
+.psec .leMo {
+    width: 542px;
+    height: 600px;
+    background: url(../images/s01_icon01_1440.png) no-repeat center bottom;
+    top: 50%;
+    left: -542px;
+    margin-top: -300px
+}
+ 
+.psec .leMo img {
+    margin: 80px 0 0 100px
+}
+ 
+.psec .riMo {
+    width: 360px;
+    height: 500px;
+    top: 50%;
+    right: -360px;
+    margin-top: -250px
+}
+ 
+.psec .riMo .to {
+    width: 304px;
+    height: 360px;
+    background: url(../images/s01_icon03.png) no-repeat;
+    background-size: 304px 360px;
+    margin: 0 0 0 30px
+}
+ 
+.psec .riMo .to img {
+    width: 178px;
+    height: 304px;
+    margin: 56px 0 0 60px
+}
+ 
+.psec .riMo .bo {
+    margin: 20px 0 0 0
+}
+ 
+.psec .riMo .bo img {
+    width: 132px;
+    height: 132px;
+    float: left
+}
+ 
+.psec .riMo .bo ul {
+    float: left;
+    margin: 8px 0 0 12px
+}
+ 
+.psec .riMo .bo ul li {
+    margin: 0 0 12px 0
+}
+ 
+.psec .riMo .bo ul li a {
+    display: block;
+    width: 180px;
+    height: 52px;
+    border-radius: 15px 0 15px 0;
+    background: #f05b34;
+    color: #fff;
+    line-height: 52px;
+    text-align: center
+}
+ 
+.psec .riMo .bo ul li a:hover {
+    opacity: 0.9
+}
+ 
+/*第1屏*/
+.page1 {
+   background-color: red;
+}
+ 
+.page1 div section.nav {
+    width: 100%;
+    height: 60px;
+    background: rgba( 0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0
+}
+ 
+.page1 div section.nav div {
+    width: 1024px;
+    height: 60px;
+    margin: 0 auto
+}
+ 
+.page1 div section.nav div a.logo {
+    display: block;
+    width: 112px;
+    height: 34px;
+    float: left;
+    margin: 15px 0 0 0
+}
+ 
+.page1 div section.nav div a.logo img {
+    width: 112px;
+    height: 34px
+}
+ 
+.page1 div section.nav div ul {
+    float: right
+}
+ 
+.page1 div section.nav div ul li {
+    float: right;
+    height: 60px;
+    margin: 0 0 0 54px
+}
+ 
+.page1 div section.nav div ul li a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+}
+ 
+.page1 div section.nav div ul li a:hover {
+    color: #f05b34
+}
+ 
+/*第2屏*/
+.page2 {
+   background-color:pink;
+}
+ 
+.psec2 .windmill {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    transition: all 0.4s ease
+}
+ 
+.psec2 .windmill div {
+    width: 100px;
+    height: 100px;
+    position: relative
+}
+ 
+.psec2 .windmill div img {
+    position: absolute
+}
+ 
+.psec2 .windmill div .img1 {
+    width: 40px;
+    height: 80px;
+    bottom: 0;
+    left: 80px
+}
+ 
+.psec2 .windmill div .img2 {
+    width: 60px;
+    height: 60px;
+    bottom: 34px;
+    left: 70px;
+    animation: windmill_rotate infinite 6s linear;
+    -webkit-animation: windmill_rotate infinite 6s linear;
+    -moz-animation: windmill_rotate infinite 6s linear;
+    -o-animation: windmill_rotate infinite 6s linear;
+}
+ 
+/*风车动画*/
+@keyframes windmill_rotate {
+    from {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+ 
+@-webkit-keyframes windmill_rotate {
+    from {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+ 
+@-moz-keyframes windmill_rotate {
+    from {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+ 
+@-o-keyframes windmill_rotate {
+    from {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+ 
+.psec2 .windmill div .img3 {
+    width: 11px;
+    height: 14px;
+    bottom: 56px;
+    left: 94px
+}
+ 
+.psec2 .leMo, .psec2 .riMo {
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+ 
+.step1 .psec2 .windmill {
+    bottom: 3%;
+}
+ 
+.step2 .psec2 .windmill {
+    bottom: 3%;
+}
+ 
+.step2 .psec2 .leMo {
+    opacity: 1;
+    left: 40px
+}
+ 
+.step2 .psec2 .riMo {
+    opacity: 1;
+    right: 40px
+}
+ 
+/*第3屏*/
+.page3 {
+    background-color:blue;
+}
+ 
+.page3 div .car {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+}
+ 
+.page3 div .car img {
+    width: 80px
+}
+ 
+.step1 div .car {
+    left: 50%
+}
+ 
+.step2 div .car {
+    left: 100%
+}
+ 
+/*第4屏*/
+.page4 {
+   background-color:#000;
+}
+ 
+.psec4 .boat {
+    position: absolute;
+    bottom: 3%;
+    left: 0%;
+    animation: boat_line infinite 120s linear;
+    -webkit-animation: boat_line infinite 120s linear;
+    -moz-animation: boat_line infinite 120s linear;
+    -o-animation: boat_line infinite 120s linear;
+}
+ 
+/*帆船动画*/
+@keyframes boat_line {
+    0% {
+        left: 0%
+    }
+    50% {
+        left: 100%
+    }
+    100% {
+        left: 0%
+    }
+}
+ 
+@-webkit-keyframes boat_line {
+    0% {
+        left: 0%
+    }
+    50% {
+        left: 100%
+    }
+    100% {
+        left: 0%
+    }
+}
+ 
+@-moz-keyframes boat_line {
+    0% {
+        left: 0%
+    }
+    50% {
+        left: 100%
+    }
+    100% {
+        left: 0%
+    }
+}
+ 
+@-o-keyframes boat_line {
+    0% {
+        left: 0%
+    }
+    50% {
+        left: 100%
+    }
+    100% {
+        left: 0%
+    }
+}
+ 
+.psec4 .boat img {
+    width: 97px;
+    height: 126px
+}
+ 
+/*第5屏*/
+.page5 {
+   background-color:green;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1.统计字符串中哪一个字符出现次数最多-->
+<!--2.去除数组重复元素-->
+<!--3.数组排序（三种）-->
+
+<script>
+    var str="aagaabbbabtavnahaa";
+
+    function maxstringload(str) {
+        var obj={};
+        for(var i=0;i<str.length;i++){
+            var key=str[i];//key中存储的是每一个字符串
+            if(obj[key]){//判断这个键值对中有没有这个键
+                obj[key]++;
+            }else{
+                obj[key]=1;//obj[w]=1
+            }
+        }
+        var maxCount=0;//假设是出现次数最多的次数
+        var maxString="";//假设这个字符串是次数出现最多的字符串
+        for(var key in obj){
+            if(maxCount<obj[key]){
+                maxCount=obj[key];//保存最大的次数
+                maxString=key;
+            }
+        }
+        return "出现次数最多的字母:"+maxString+"出现了"+maxCount+"次";
+    }
+    console.log(maxstringload(str))
+
+
+
+    function unique(array){
+        var n = {}, r = [], len = array.length, val, type;
+        for (var i = 0; i < array.length; i++) {
+            val = array[i]; type = typeof val; if (!n[val]) {
+                n[val] = [type]; r.push(val);
+            }
+            else if (n[val].indexOf(type) < 0) {
+                n[val].push(type); r.push(val);
+            }
+        } return r;
+    }
+    //测试代码： var arr=[1,2,3,4,5,29,5,3,1,2];
+    // var rel=unique(arr); console.log(rel);
+
+    //sort方法
+    var array = [1,4,-8,-3,6,12,9,8];
+    function compare(val1,val2){
+        return val1-val2;
+    };
+    array.sort(compare);
+    document.write(array);
+    //冒泡
+    var array = [1,4,-8,-3,6,12,9,8];
+    function sort(arr){
+        for(var j=0;j<arr.length-1;j++){
+            //两两比较，如果前一个比后一个大，则交换位置。
+            for(var i=0;i<arr.length-1-j;i++){
+                if(arr[i]>arr[i+1]){
+                    var temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
+                }
+            }
+        }
+    }
+    sort(array);
+    document.write(array);
+
+//快速排序
+    var array = [1,4,-8,-3,6,12,9,8];
+    function quickSort(arr){
+//如果数组长度小于等于1，则返回数组本身
+        if(arr.length<=1){
+            return arr;
+        }
+        //定义中间值的索引
+        var index = Math.floor(arr.length/2);
+        //取到中间值
+        var temp = arr.splice(index,1);
+        //定义左右部分数组
+        var left = [];
+        var right = [];
+        for(var i=0;i<arr.length;i++){
+            //如果元素比中间值小，那么放在左边，否则放右边
+            if(arr[i]<temp){
+                left.push(arr[i]);
+            }else{
+                right.push(arr[i]);
+            }
+        }
+        return quickSort(left).concat(temp,quickSort(right));
+    }
+    document.write(quickSort(array));
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+/*
+* @Author: hp
+* @Date:   2019-08-22 18:04:58
+* @Last Modified by:   hp
+* @Last Modified time: 2019-08-23 17:28:08
+*/
+html,body{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.center-top{
+	height:100vh;
+	width:100vw;
+	background-color:pink;
+}
+.center-top .center-box img{
+	height:100vh;
+}
+
+.center-top .line:before{
+	content:'';
+	width:32px;
+	height:100vh;
+	background-color:#232442;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 11;
+}
+
+.center-top .line:after{
+	content:'';
+	width:21px;
+	height:215px;
+	background-color:#232442;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index: 11;
+}
+
+.center-top .center-bot{
+    width:50%;
+    color:#fff;
+    font-size:32px;
+	line-height:112px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	background-color:rgba(35,36,66,0.9);
+}
+.center-top .center-bot span{
+	margin-left:70px;
+}
+
+.shimu{
+	position:fixed;
+	left:118px;
+	top:20%;
+}
+.shimu .shimu-top img{
+	margin-bottom:30px;
+}
+.shimu ul li{
+	text-align:center;
+	color:#fff;
+	width:141px;
+	height:50px;
+	line-height:50px;
+	font-weight: 600;
+	background-color:#232442;
+	border-bottom:1px solid#000;
+	position:relative;
+	cursor:pointer;
+	z-index:11;
+}
+.shimu ul li span:before{
+	display:inline-block;
+	content:'';
+	width:100%;
+	height:0px;
+	background-color:#cfa972;
+	position:absolute;
+	left:0;
+	top:50%;
+	transition: .4s;
+}
+.shimu ul li:hover  span:before{
+	top:0;
+	height:100%;
+	color:#fff;
+	z-index: -1;
+}
+.dow{
+	width:90px;
+	height:90px;
+	background: url('../images/radius.png')no-repeat;
+	position:absolute;
+	left:120px;
+	bottom:40px;
+}
+.center-top2{
+	height:100vh;
+	width:100%;
+	background-color:pink;
+	position: absolute;
+	top:0px;
+}
+
+  @media (max-width:1280px){
+
+}
+
+@media (max-width:1200px){
+
+}
+@media (max-width:1024px){
+
+   
+}
+  @media (max-width:851px){
+      
+   
+}
+@media (max-width:641px){
+
+}
+
+
+@media (max-width:480px){
+
+
+}
+
+
+
+

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       
+        <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+    .banner-text{
+    width:48%;
+    position:absolute;
+    right:0;
+    bottom:50%;
+    background:rgba(35,36,66,0.85);
+}
+.banner-all{
+    width:100%;
+    height:280px;
+    position:relative;
+}
+.text-top{
+    height:243px;
+}
+.text-top ul{
+    width:85%;
+    height:195px;
+    position:relative;
+    top:50px;
+    left:50px;
+}
+.text-top:before{
+    content:'';
+    width:9px;
+    height:80px;
+    position:absolute;
+    top:0px;
+    left:41px;
+    background-color:#e6d6c1;
+
+}
+.text-top ul li{
+    width:100%;
+    color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+.text-top ul li:nth-child(1){
+   opacity:1;
+   
+}
+.donghua{
+    animation:text 4s infinite;
+
+}
+@keyframes text{
+    from{
+       transform:skew(-30deg); 
+       
+    }
+    to{
+        transform:skew(0deg);
+        
+    }
+}
+.text-top ul li h3{
+    font-size:38px;
+    margin-top:0px;
+    margin-bottom:20px;
+}
+.text-top ul li  p{
+    font-size:14px;
+    height:88px;
+}
+.text-top ul li a:before{
+    content:'';
+    display:inline-block;
+    width:20px;
+    height:10px;
+    position:absolute;
+    left:70px;
+    bottom:5px;
+    background:url('./images/arrow.png') no-repeat;
+}
+
+.text-bottom{
+    width:100%;
+    height:47px;
+    background-color:#efe2d1;
+    position:absolute;
+    bottom:0px;
+}
+
+.text-bottom span{
+	display:block;
+	width:15px;
+	height:20px;
+    margin-left:60px;
+    float:left;
+    margin-top:15px;
+    position:relative;
+    background-color:red;
+    z-index:2px;
+  
+  
+}
+.text-bottom span img{
+	margin-left:2px;
+	
+}
+.text-bottom .bot-r:before{
+	content:'';
+	width:10px;
+	height:16px;
+	background:url('./images/arrow12.png')no-repeat;
+	position:absolute;
+	top:0;
+	left:2px;
+	opacity:0;
+	z-index:-1;
+	
+}
+.text-bottom .bot-r{
+	margin-left:0px;
+}
+
+.text-bottom span:hover:before{
+    opacity:1;
+}
+.text-bottom span:hover .bot-r:before{
+    opacity:1;
+}
+.text-bottom p{
+	width:90px;
+	height:47px;
+	background-color:pink;
+	float:left;
+	text-align:center;
+	line-height:47px;
+}
+
+        </style>
+
+        	
+    </head>
+   
+    <body>
+
+      <div class="banner-text">
+            <div class="banner-all">
+             <div class="text-top">
+             <ul class="ban-t ">
+                 <li>
+                     <h3>至臻品质 现代实木</h3>
+                     <p>A&K沃克家居，致力于为消费者提供健康、时尚、休闲、舒适的人性化家居生活方式</p>
+                     <a href="#"> 了解更多</a>
+                 </li>
+                 <li>
+                     <h3>北欧现代 时尚实木</h3>
+                     <p>BOSIAA·博思亚，为现代都市青年时尚生活空间潮流而生！
+                     </p>
+                     <a href="#">了解更多</a>
+                 </li>
+                  <li>
+                     <h3>北欧现代 时尚实木</h3>
+                     <p>BOSIAA,运用国际流行设计元素，让沉稳质朴的实木家具多一份轻快的现代气息。风格各异却又个性鲜明，源于自然而又归于自然，为您在现代都市营造一种浑然天成的宁静空间。</p>
+                     <a href="#">了解更多</a>
+                 </li>
+                   <li>
+                     <h3>北欧现代 时尚实木</h3>
+                     <p>BOSIAA,运用国际流行设计元素，让沉稳质朴的实木家具多一份轻快的现代气息。风格各异却又个性鲜明，源于自然而又归于自然，为您在现代都市营造一种浑然天成的宁静空间。</p>
+                     <a href="#">了解更多</a>
+                 </li>
+                  <li>
+                     <h3>逗趣时光 炫彩实木</h3>
+                     <p>雕刻七巧青春，演绎逗趣年华 让家居闪放迷人光芒，从C-kids·酷卡思开始</p>
+                     <a href="#">了解更多</a>
+                 </li>
+                 <li>
+                     <h3>逗趣时光 炫彩实木</h3>
+                     <p>雕刻七巧青春，演绎逗趣年华 让家居闪放迷人光芒，从C-kids·酷卡思开始</p>
+                     <a href="#">了解更多</a>
+                 </li>
+                 <li>
+                     <h3>至臻品质 现代实木</h3>
+                     <p></p>
+                     <a href="#">了解更多</a>
+                 </li>  
+             </ul>
+             </div>
+              <div class="text-bottom">
+               <span class="bot-l"> <img src="./images/arrow9.png" alt=""></span>
+               <p>1/7</p>
+              <span class="bot-r"><img src="./images/arrow10.png" alt=""></span>
+             </div> 
+         </div>       
+         </div>
+
+   
+ 
+     <script src="js/jquery-3.4.1.min.js"></script>
+         <script>
+         	  //     var n=1;
+            // $('.text-bottom').click(function(event) {
+            // 	 Act on the event 
+            // 	   n++;
+            // 	   console.log(n);	 
+            // })
+            $(function(){
+
+                var n=0;
+                $('.bot-r').click(function(event) {
+                	/* Act on the event */
+                	 n++;
+                	 if(n>7){
+                	 	n=0;
+                	 }
+
+                	 
+
+
+                	 $('.text-bottom p').html(n+"/7");
+                });
+                $('.bot-l').click(function(event) {
+                	/* Act on the event */
+                	 n--;
+                	 if(n<1){
+                	 	n=7;
+                	 }
+                	 $('.text-bottom p').html(n+"/7");
+                });
+
+              	   
+                	 
+            	$('.text-bottom p').html(n+1+"/7");
+
+            },3000)
+ 
+
+          })
+            
+         </script>
+    </body>
+</html>

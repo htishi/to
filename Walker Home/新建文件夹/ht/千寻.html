@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+  
+
+  <style>
+  	*{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+body{
+	font-size: 14px;
+	color: #333;
+	font-family: "微软雅黑";
+}
+.logo,.musiclogo,aside,nav,.download{
+	z-index: 3;
+	position: fixed;
+}
+.logo{
+	top: 20px;
+	left: 30px;
+	width: 150px;
+}
+/* 背景音乐 */
+.musiclogo{
+	width: 50px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	animation: musicgo 8s linear infinite;
+}
+@keyframes musicgo{
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
+/* 侧导航栏 */
+aside{
+	top: 50%;
+	right: 10px;
+	margin-top: -135px;
+	z-index: 6;
+}
+aside ul li{
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #cef3fb;
+	cursor: pointer;
+}
+aside ul li.addear{
+	background-image: url('../images/side_bg.png');
+	background-size: 100% 100%;
+	width: 50px;
+	height: 50px;
+	border: none;
+	margin-left: 0px;
+	animation: musicgo 8s linear infinite;
+}
+@keyframes eargo{
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
+/* 背景切换内容部分 */
+html,body,section{
+	width: 100%;
+	height: 100%;
+}
+body{
+	overflow: hidden;
+}
+section>div{
+	width: 100%;
+	height: 100%;
+}
+section{
+	position: relative;
+	top: 0%;
+	
+}
+section .screen1{
+	overflow: hidden;
+    background-color:red;
+    transition:2s;
+}
+section .src{
+	position: relative;
+	text-align: center;
+	width: 80%;
+	margin: 90px auto;
+}
+section .text1{
+	display: inline-block;
+	width: 148px;
+	height: 50px;
+	background: url('../images/logo-text.png') no-repeat;
+	background-position: 17px -16px;
+	left: 0px;
+	position: relative;
+	transition: 1s;
+}
+section .none .text1{
+	left:800px;
+	transform: rotate(360deg);
+	opacity: 0;
+}
+section .text2{
+	width: 200px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	right: 0px;
+	transition: 1s;
+}
+section .none .text2{
+	right:800px;
+	transform: rotate(360deg);
+	opacity: 0;
+}
+section .screen1 .src .biglogo{
+	margin: 80px;
+	margin-bottom: 30px;
+	width: 150px;
+	position: relative;
+	animation: balo 5s linear infinite;
+}
+@keyframes balo{
+	0%{top: 0px;}
+	50%{top:-50px;}
+	100%{top:0px;}
+}
+section .screen1 .src .clound{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 300px;
+}
+section .screen1 .src .clound img:nth-child(1){
+	animation: cloundgo 50s linear infinite;
+}
+section .screen1 .src .clound img:nth-child(2){
+	margin-left: 250px;
+	position: relative;
+	top: -50px;
+	z-index: 0;
+	animation: cloundgo1 100s linear infinite;
+}
+@keyframes cloundgo{
+	0%{transform: translate(0, 0);}
+	47%{transform: translate(-1200px,0);}
+	48%{transform: translate(-1250px,0);opacity: 0;}
+	50%{transform: translate(1000px,0);opacity: 0;}
+	52%{transform: translate(900px,0);opacity: 1;}
+	100%{transform: translate(0,0);}
+}
+@keyframes cloundgo1{
+	0%{transform: translate(0, 0);}
+	47%{transform: translate(-2000px,0);}
+	48%{transform: translate(-2050px,0);opacity: 0;}
+	50%{transform: translate(1000px,0);opacity: 0;}
+	52%{transform: translate(900px,0);opacity: 1;}
+	100%{transform: translate(0,0);}
+}
+section .text1 img{
+	width: 100px;
+	margin-left: -20px;
+}
+section .text2 img{
+	width: 200px;
+}
+section p{
+	color: white;
+	transition: 1s;
+}
+section .none p{
+	opacity: 0;
+	transform: scale(0.1);
+}
+
+
+section .screen2{
+	overflow: hidden;
+	background-image: url('../images/bg02.jpg');
+	background-size: 100% 100%;
+}
+section .screen2 .src{
+	position: relative;
+}
+section .screen2 .src .combg{
+	margin: 40px;
+	margin-bottom: 30px;
+	width: 150px;
+	z-index: 5;
+}
+section .screen2 .src .biglogo{
+	position: absolute;
+	width: 100px;
+	top: 66px;
+	left: 50%;
+	margin-left: -50px;
+	animation: comgo 10s infinite;
+}
+@keyframes comgo{
+	0%{transform-origin: 50px 50px;transform: rotate(30deg);}
+	30%{transform-origin: 50px 50px;transform: rotate(160deg);}
+	50%{transform-origin: 50px 50px;transform: rotate(0deg);}
+	80%{transform-origin: 50px 50px;transform: rotate(30deg);}
+	90%{transform-origin: 50px 50px;transform: rotate(40deg);}
+	92%{transform-origin: 50px 50px;transform: rotate(30deg);}
+	94%{transform-origin: 50px 50px;transform: rotate(20deg);}
+	100%{transform-origin: 50px 50px;transform: rotate(30deg);}
+}
+section .screen2 .src .fire-ball{
+	position: absolute;
+	top: -20px;
+	right: 20%;
+	animation: fireballgo 6s linear infinite;
+}
+
+
+
+
+
+  </style>
+
+    </head>
+    <body>
+<aside>
+		<ul>
+			<li class="addear"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</aside>
+	<section>
+		<div class="screen1">
+			<div class="src none">
+				
+			</div>
+		</div>
+		<div class="screen2">
+			<div class="src none">
+				
+			</div>
+		</div>
+		
+	</section>
+
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.js"></script>
+
+    <script>
+    	$(function(){
+	//背景音乐
+	$(".musiclogo").click(function(event){
+		var now = $(this).css("animationPlayState");
+		console.log(now);
+		if(now=="running"){
+			$(".musiclogo").css('animationPlayState', 'paused');
+			$("audio")[0].pause();
+		}else{
+			$(".musiclogo").css('animationPlayState', 'running');
+			$("audio")[0].play();
+		}
+	});
+	//侧导航栏
+	$("aside ul li").click(function(event) {
+		$(this).addClass('addear').siblings('li').removeClass('addear');
+		var i = $(this).index();
+		$("section").animate({"top":-100*i+"%"},500);
+		$("section").children().children('.src').addClass('none');
+		$("section").children().eq(i).children('.src').removeClass('none');
+	});
+	// 鼠标滚动
+	var n = 0;
+	var timer;
+	$(".screen1").children('.src').removeClass('none');
+	$(document).mousewheel(function(e,d){
+		clearTimeout(timer);
+		timer=setTimeout(function(){
+			n = n-d;
+			if (n>6) {n=6}
+			if (n<0) {n=0}
+			$("section").children().children('.src').addClass('none');
+			$("section").children().eq(n).children('.src').removeClass('none');
+			$("section").animate({"top":-100*n+"%"},1000);
+			$("aside ul li").eq(n).addClass('addear').siblings('li').removeClass('addear');
+		},1000)
+	})
+	//screen5的动画效果
+	var s = 0;
+	var timer5;
+	clearInterval(timer5);
+	timer5 = setInterval(function(){
+		if(s>5){
+			s=0;
+			$(".Biglogo ul li").eq(s).css('opacity','1').siblings('li').css('opacity', '0');
+		}
+		$(".Biglogo ul li").eq(s).css('opacity','1').siblings('li').css('opacity', '0');
+		s++;
+	},1000);
+
+})
+
+
+    </script>
+    </body>
+</html>
